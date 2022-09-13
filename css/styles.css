@@ -76,6 +76,7 @@ input:focus {
   margin-bottom: 1rem;
   display: flex;
   flex-direction: column;
+  position: relative;
 }
 
 .form-control label {
@@ -87,6 +88,44 @@ input:focus {
   border: none;
   border-bottom: 1px solid #aaa;
   padding: 0.6rem 0;
+}
+
+.form-control i {
+  position: absolute;
+  top: 40px;
+  right: 10px;
+  visibility: hidden;
+}
+
+.form-control small {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  visibility: hidden;
+}
+
+/* Erro ou sucesso no preenchimento dos inputs */
+.form-control.success input {
+  border-bottom: 1px solid #81d340;
+}
+
+.form-control.error input {
+  border-bottom: 1px solid #e74c3c;
+}
+
+.form-control.success i.bi-check-circle-fill {
+  color: #81d340;
+  visibility: visible;
+}
+
+.form-control.error i.bi-exclamation-circle-fill {
+  color: #e74c3c;
+  visibility: visible;
+}
+
+.form-control.error small {
+  color: #e74c3c;
+  visibility: visible;
 }
 
 #generate-password {

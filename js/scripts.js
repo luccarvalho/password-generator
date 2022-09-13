@@ -1,6 +1,7 @@
 // Seleção de Elementos
 const generatePasswordButton = document.querySelector("#generate-password");
 const generatedPasswordElement = document.querySelector("#generated-password");
+const register = document.querySelector("#btn-register");
 
 // Funções (letras, Números e Símbolos)
 const getLetterLowerCase = () => {
@@ -45,4 +46,9 @@ const generatePassword = (getLetterLowerCase, getLetterUpperCase, getNumber, get
 // Eventos
 generatePasswordButton.addEventListener("click", () => {
     generatePassword(getLetterLowerCase, getLetterUpperCase, getNumber, getSymbol);
+})
+
+register.addEventListener("click", () => {
+    alert("Cadastro realizado com sucesso!");
+    location.reload();
 })
