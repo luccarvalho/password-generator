@@ -55,7 +55,7 @@ function checkInputs() {
 
     if (formIsValid) {
         setTimeout(() => { confirm("Cadastro realizado com sucesso!") }, 300);
-        // location.reload();
+        setTimeout(() => { location.reload() }, 300);
     }
 }
 
